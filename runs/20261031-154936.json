@@ -1,0 +1,411 @@
+{
+  "request": "new software or ML internships posted since Monday that fit me",
+  "profile": "/Users/abelmesfinteka/Downloads/Project CIS 1990/internship-agent/profiles/sample_student.json",
+  "model": "gemini-flash-lite-latest",
+  "as_of": "2026-10-31",
+  "result": {
+    "roles": [
+      {
+        "rank": 1,
+        "listing_id": "6fc8c909-a182-4271-9fc0-a166d5865190",
+        "company": "Stripe",
+        "title": "Machine Learning Engineer Intern",
+        "locations": [
+          "Seattle, WA",
+          "SF",
+          "NYC"
+        ],
+        "url": "https://stripe.com/jobs/search?gh_jid=8328662",
+        "date_posted": "2026-10-30",
+        "deadline": "not checked",
+        "fit_reason": "Your project Transit Delay Predictor directly applies machine learning techniques in PyTorch, aligning well with Stripe's Machine Learning Engineer Intern role.",
+        "key_requirements": []
+      },
+      {
+        "rank": 2,
+        "listing_id": "8cb5c0c9-c8bc-426f-a7e3-9aa6f16b2ca5",
+        "company": "Stripe",
+        "title": "Machine Learning Engineer Intern",
+        "locations": [
+          "Seattle, WA",
+          "SF",
+          "NYC"
+        ],
+        "url": "https://stripe.com/jobs/search?gh_jid=8333074",
+        "date_posted": "2026-10-30",
+        "deadline": "not checked",
+        "fit_reason": "Your project Transit Delay Predictor directly applies machine learning techniques in PyTorch, aligning well with Stripe's Machine Learning Engineer Intern role.",
+        "key_requirements": []
+      }
+    ],
+    "dropped": [],
+    "failed_sources": [],
+    "notes": "No tool failures occurred during this search."
+  },
+  "trace": {
+    "tool_calls": [
+      {
+        "step": 1,
+        "tool": "search_listings",
+        "arguments": {
+          "category": "AI/ML/Data",
+          "location": "New York",
+          "posted_after": "2026-10-26",
+          "term": "Summer 2027"
+        },
+        "thought": "I will search for software and machine learning internships in New York or Remote posted since Monday, October 26, 2026.",
+        "results": [
+          {
+            "listing_id": "e00d51e8-391a-473d-a100-37fa803e306d",
+            "company": "Andreessen Horowitz",
+            "title": "Research Intern - Frontier",
+            "category": "AI/ML/Data",
+            "locations": [
+              "NYC"
+            ],
+            "date_posted": "2026-10-30",
+            "url": "https://a16z.com/about/jobs/?gh_jid=8046730003",
+            "ats": "other"
+          },
+          {
+            "listing_id": "6fc8c909-a182-4271-9fc0-a166d5865190",
+            "company": "Stripe",
+            "title": "Machine Learning Engineer Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "Seattle, WA",
+              "SF",
+              "NYC"
+            ],
+            "date_posted": "2026-10-30",
+            "url": "https://stripe.com/jobs/search?gh_jid=8328662",
+            "ats": "other"
+          },
+          {
+            "listing_id": "8cb5c0c9-c8bc-426f-a7e3-9aa6f16b2ca5",
+            "company": "Stripe",
+            "title": "Machine Learning Engineer Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "Seattle, WA",
+              "SF",
+              "NYC"
+            ],
+            "date_posted": "2026-10-30",
+            "url": "https://stripe.com/jobs/search?gh_jid=8333074",
+            "ats": "other"
+          },
+          {
+            "listing_id": "10827b55-2941-4d5e-b513-29f0808017c4",
+            "company": "Barclays",
+            "title": "Client Data & Engineering Group Summer Intern - Chief Client Office",
+            "category": "AI/ML/Data",
+            "locations": [
+              "NYC"
+            ],
+            "date_posted": "2026-10-30",
+            "url": "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays/job/New-York-745-7th-Avenue/Chief-Client-Office---Client-Data---Engineering-Group-Summer-Internship-Program-2027-New-York-City_JR-0000137731",
+            "ats": "workday"
+          },
+          {
+            "listing_id": "01d416dc-844e-4698-a114-49f2d585c63a",
+            "company": "Dow Jones",
+            "title": "Data Analyst Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "NYC"
+            ],
+            "date_posted": "2026-10-30",
+            "url": "https://dowjones.wd1.myworkdayjobs.com/en-US/Dow_Jones_Career/job/NYC---1211-Ave-of-the-Americas/Summer-2027-Internship-Program---Data-Analyst-Intern_Job_Req_55894",
+            "ats": "workday"
+          },
+          {
+            "listing_id": "ce8c7adb-0ba0-4fdd-b6e8-4832a9f1043d",
+            "company": "AXA",
+            "title": "Underwriting Data & Analytics Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "NYC"
+            ],
+            "date_posted": "2026-10-29",
+            "url": "https://careers.axa.com/jobs/25498?icims=1",
+            "ats": "other"
+          },
+          {
+            "listing_id": "6467cf8c-5a58-428a-ba20-03993fdff4d8",
+            "company": "Highmark Health",
+            "title": "Clinical and Population Health Graduate Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "New Mexico",
+              "Washington",
+              "Kansas",
+              "Pennsylvania",
+              "North Dakota",
+              "Oregon",
+              "Delaware",
+              "Iowa",
+              "California",
+              "Washington, DC",
+              "Vermont",
+              "Wyoming",
+              "Connecticut",
+              "Texas",
+              "Montana",
+              "Florida",
+              "New Hampshire",
+              "Nevada",
+              "South Carolina",
+              "South Dakota",
+              "Georgia",
+              "Arizona",
+              "Mississippi",
+              "Tennessee",
+              "Virginia",
+              "Arkansas",
+              "Minnesota",
+              "Colorado",
+              "Nebraska",
+              "Rhode Island",
+              "Utah",
+              "Kentucky",
+              "West Virginia",
+              "NYC",
+              "Maryland",
+              "Hawaii",
+              "Wisconsin",
+              "Maine",
+              "Massachusetts",
+              "North Carolina",
+              "Oklahoma",
+              "Ohio",
+              "New Jersey",
+              "Indiana",
+              "Louisiana",
+              "Alaska",
+              "Michigan",
+              "Illinois",
+              "Alabama",
+              "Idaho"
+            ],
+            "date_posted": "2026-10-29",
+            "url": "https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Summer-2027-Clinical-and-Population-Health-Graduate-Intern_J288011",
+            "ats": "workday"
+          },
+          {
+            "listing_id": "08f5ae2c-794c-4da3-94f0-d72a0a5e2b56",
+            "company": "Amazon",
+            "title": "Robotics Applied Scientist 2 Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "Seattle, WA",
+              "North Reading, MA",
+              "NYC",
+              "Bellevue, WA",
+              "Sunnyvale, CA",
+              "Westborough, MA"
+            ],
+            "date_posted": "2026-10-28",
+            "url": "https://amazon.jobs/en/jobs/10591833/2027-applied-science-internship-robotics-united-states",
+            "ats": "other"
+          },
+          {
+            "listing_id": "28d0195c-1d74-4ea8-af4b-8d6f20cb117c",
+            "company": "JP Morgan Chase",
+            "title": "Machine Learning Center of Excellence Summer Associate Intern - Time Series and Reinforcement Learning - Tsrl",
+            "category": "AI/ML/Data",
+            "locations": [
+              "NYC"
+            ],
+            "date_posted": "2026-10-27",
+            "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210803983",
+            "ats": "other"
+          },
+          {
+            "listing_id": "030fdb6b-01ac-436e-9527-c49cc3723afe",
+            "company": "David Yurman",
+            "title": "Strategic Analytics Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "NYC"
+            ],
+            "date_posted": "2026-10-27",
+            "url": "https://davidyurman.wd1.myworkdayjobs.com/DavidYurmanCareers/job/New-York-NY/Strategic-Analytics-Intern_R-101176",
+            "ats": "workday"
+          },
+          {
+            "listing_id": "c13ba061-0f47-4ed1-a1b5-adfb21b32a66",
+            "company": "Tradeweb",
+            "title": "Human Resources Data & Analytics Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "NYC"
+            ],
+            "date_posted": "2026-10-26",
+            "url": "https://ecnf.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/301987",
+            "ats": "other"
+          },
+          {
+            "listing_id": "c917f0bc-a8d2-4468-ad7c-573f62b007bd",
+            "company": "Highmark Health",
+            "title": "Predictive Modeling & Data Science Graduate Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "New Mexico",
+              "Washington",
+              "Kansas",
+              "Pennsylvania",
+              "North Dakota",
+              "Oregon",
+              "Delaware",
+              "Iowa",
+              "California",
+              "Washington, DC",
+              "Vermont",
+              "Wyoming",
+              "Connecticut",
+              "Texas",
+              "Montana",
+              "Florida",
+              "New Hampshire",
+              "Nevada",
+              "South Carolina",
+              "South Dakota",
+              "Georgia",
+              "Arizona",
+              "Mississippi",
+              "Tennessee",
+              "Virginia",
+              "Arkansas",
+              "Minnesota",
+              "Colorado",
+              "Nebraska",
+              "Rhode Island",
+              "Utah",
+              "Kentucky",
+              "West Virginia",
+              "NYC",
+              "Maryland",
+              "Hawaii",
+              "Wisconsin",
+              "Maine",
+              "Massachusetts",
+              "North Carolina",
+              "Oklahoma",
+              "Missouri",
+              "Ohio",
+              "New Jersey",
+              "Indiana",
+              "Louisiana",
+              "Alaska",
+              "Michigan",
+              "Illinois",
+              "Alabama",
+              "Idaho"
+            ],
+            "date_posted": "2026-10-26",
+            "url": "https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Summer-2027-Predictive-Modeling---Data-Science-Graduate-Intern_J288333",
+            "ats": "workday"
+          },
+          {
+            "listing_id": "bfbf3ca8-38df-48d8-9039-e1b886870dca",
+            "company": "Highmark Health",
+            "title": "Enterprise Master Data Management Analyst Graduate Intern",
+            "category": "AI/ML/Data",
+            "locations": [
+              "New Mexico",
+              "Washington",
+              "Kansas",
+              "Pennsylvania",
+              "North Dakota",
+              "Oregon",
+              "Delaware",
+              "Iowa",
+              "California",
+              "Washington, DC",
+              "Vermont",
+              "Wyoming",
+              "Connecticut",
+              "Texas",
+              "Montana",
+              "Florida",
+              "New Hampshire",
+              "Nevada",
+              "South Carolina",
+              "South Dakota",
+              "Georgia",
+              "Arizona",
+              "Mississippi",
+              "Tennessee",
+              "Virginia",
+              "Arkansas",
+              "Minnesota",
+              "Colorado",
+              "Nebraska",
+              "Rhode Island",
+              "Utah",
+              "Kentucky",
+              "West Virginia",
+              "NYC",
+              "Maryland",
+              "Hawaii",
+              "Wisconsin",
+              "Maine",
+              "Massachusetts",
+              "North Carolina",
+              "Oklahoma",
+              "Missouri",
+              "Ohio",
+              "New Jersey",
+              "Indiana",
+              "Louisiana",
+              "Alaska",
+              "Michigan",
+              "Illinois",
+              "Alabama",
+              "Idaho"
+            ],
+            "date_posted": "2026-10-26",
+            "url": "https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Summer-2027-Enterprise-Master-Data-Management-Analyst-Graduate-Intern_J289856",
+            "ats": "workday"
+          }
+        ],
+        "latency_s": 0.003
+      }
+    ],
+    "llm_calls": [
+      {
+        "node": "agent",
+        "model": "gemini-flash-lite-latest",
+        "input_tokens": 1222,
+        "output_tokens": 110,
+        "latency_s": 0.0,
+        "wait_s": 0.0,
+        "attempts": 0,
+        "cached": true
+      },
+      {
+        "node": "agent",
+        "model": "gemini-flash-lite-latest",
+        "input_tokens": 3745,
+        "output_tokens": 208,
+        "latency_s": 1.2809779170202091,
+        "wait_s": 0.0,
+        "attempts": 1,
+        "cached": false
+      }
+    ]
+  },
+  "totals": {
+    "llm_calls": 2,
+    "failed_llm_calls": 0,
+    "tool_calls": 1,
+    "cached_llm_calls": 1,
+    "input_tokens": 4967,
+    "output_tokens": 318,
+    "llm_s": 1.28,
+    "tool_s": 0.0,
+    "wait_s": 0.0,
+    "wall_s": 1.29
+  }
+}

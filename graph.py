@@ -301,6 +301,35 @@ def _finalize(state: AgentState, answer: dict) -> dict:
             "notes": answer.get("notes", "")}
 
 
+def _model_failed(state: AgentState, error: Exception) -> dict:
+    """_model_failed - end the run cleanly when a model call fails.
+
+    Parameters:
+        state (AgentState): The current graph state.
+        error (Exception): The error raised by ``complete_with_usage``
+            after its own retries were used up.
+
+    Returns:
+        dict: A state update with an empty ranked list whose
+        ``failed_sources`` names the model error, a ``messages`` line, and
+        an ``llm_calls`` record of the failed call.
+
+    Description:
+        The tool data gathered so far stays in the trace, and the notes say
+        how many listings were found, so the run still reports what it did.
+    """
+    found = {listing["listing_id"]
+             for record in state.get("scratchpad") or []
+             if record["tool"] == "search_listings" and not record.get("error")
+             for listing in record["results"]}
+    result = _finalize(state, {"roles": [], "notes": (
+        f"The model call failed, so no ranking was made. {len(found)} listing(s) "
+        "were found before the failure; see the trace.")})
+    result["failed_sources"].append(f"model {MODEL}: {error}")
+    return {"result": result, "messages": [f"Model failed: {error}"],
+            "llm_calls": [{"node": "agent (failed)", "model": MODEL, "error": str(error)}]}
+
+
 def agent_node(state: AgentState) -> dict:
     """agent_node - ask the model for the next tool call or the final answer.
 
@@ -311,6 +340,26 @@ def agent_node(state: AgentState) -> dict:
         dict: A state update. For a tool request: ``messages`` (the request
         as JSON). For an answer: ``result`` (from ``_finalize``) and
         ``messages``. Always ``llm_calls`` with the call's usage.
+
+    Description:
+        If a model call still fails after ``llm.py``'s retries, the run ends
+        through ``_model_failed`` instead of raising. Otherwise see
+        ``_agent_step``.
+    """
+    try:
+        return _agent_step(state)
+    except RuntimeError as error:
+        return _model_failed(state, error)
+
+
+def _agent_step(state: AgentState) -> dict:
+    """_agent_step - one agent decision; ``agent_node`` handles model errors.
+
+    Parameters:
+        state (AgentState): The current graph state.
+
+    Returns:
+        dict: The state update described in ``agent_node``.
 
     Description:
         An answer is not accepted before any tool has run; the model is told

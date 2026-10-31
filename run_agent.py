@@ -27,14 +27,20 @@ def totals(trace: dict, wall_s: float) -> dict:
         wall_s (float): Wall-clock seconds for the whole run.
 
     Returns:
-        dict: Counts of model and tool calls, input and output tokens (None
-        if any call did not report them), seconds spent in model calls, in
-        tool calls, and waiting on throttles or backoff, and wall time.
+        dict: Counts of model calls (and how many failed), tool calls, input
+        and output tokens (None if any successful call did not report them),
+        seconds spent in model calls, in tool calls, and waiting on throttles
+        or backoff, and wall time.
+
+    Description:
+        A failed model call has only an ``error``, so it is counted in
+        ``failed_llm_calls`` and left out of the token and time sums.
     """
-    llm = trace["llm_calls"]
+    llm = [c for c in trace["llm_calls"] if "error" not in c]
     tokens_known = all(c["input_tokens"] is not None for c in llm)
     return {
         "llm_calls": len(llm),
+        "failed_llm_calls": len(trace["llm_calls"]) - len(llm),
         "tool_calls": len(trace["tool_calls"]),
         "cached_llm_calls": sum(c["cached"] for c in llm),
         "input_tokens": sum(c["input_tokens"] for c in llm) if tokens_known else None,
