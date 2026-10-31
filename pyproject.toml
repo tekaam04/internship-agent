@@ -1,0 +1,13 @@
+[project]
+name = "internship-agent"
+version = "0.1.0"
+description = "CIS 1990 Final Project - Internship Pipeline and Outreach Agent"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai==2.25.0",
+    "langgraph==1.2.12",
+    "python-dotenv==1.2.3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0.0"]

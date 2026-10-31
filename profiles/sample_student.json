@@ -1,0 +1,25 @@
+{
+  "name": "Sample Student",
+  "note": "Synthetic profile for development and evaluation; not a real person.",
+  "class_year": "sophomore",
+  "graduation": "May 2029",
+  "target_roles": ["software engineering", "machine learning"],
+  "preferred_locations": ["New York", "Remote"],
+  "needs_sponsorship": true,
+  "skills": ["Python", "Java", "SQL", "PyTorch", "React", "Git"],
+  "projects": [
+    {
+      "name": "Campus Course Planner",
+      "summary": "React and Flask web app that recommends course schedules from degree requirements; 300 student users."
+    },
+    {
+      "name": "Retrieval QA Agent",
+      "summary": "Python agent that answers questions over a document collection with embedding search, BM25, and cited evidence."
+    },
+    {
+      "name": "Transit Delay Predictor",
+      "summary": "PyTorch model trained on public transit data to predict bus delays; evaluated against a historical-average baseline."
+    }
+  ],
+  "contacts": []
+}
